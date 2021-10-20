@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cyborg/bootstrap.min.css"
+        integrity="sha384-nEnU7Ae+3lD52AK+RGNzgieBWMnEfgTbRHIwEvp1XXPdqdO6uLTd/NwXbzboqjc2" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='background.css') }}">
+    <title>Data Compressor</title>
+
+    <style>
+        body {
+            background-image: url("static/background.jpg");
+            background-color: black;
+            /* height: 100%; */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class='text-center'>
+            <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+                <div class="container">
+                    <a class="navbar-brand mr-4" href="/">Emotionic</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main role="main" class="container">
+        <p>
+        <h1 class="text-center" style="color:#ffffff;">Original File : {{orig}}</h1>
+        </p>
+        <p>
+            <h1 class="text-center" style="color:#ffffff;">Compressed File : {{comp}}</h1>
+        </p>
+        <p>
+            <h1 class="text-center" style="color:#ffffff;">Compression Ratio : {{orig/comp}}</h1>
+        </p>
+        <br><br>
+        <!-- <form class="text-center" enctype=multipart/form-data action="" method="post"
+            style="color:#ffffff; font-size: xx-large">
+            <br><br>
+            <div class="form-group">
+                <label for="name">File:</label>
+                <input type="file" class="form-control" id="file" name="file">
+            </div>
+            <div class="form-group" style="font-size:xx-large;">
+                <input class="btn-warning" type="submit" value="Compress">
+            </div>
+        </form> -->
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
