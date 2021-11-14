@@ -39,13 +39,6 @@ def compress_file():
 
 @app.route('/compress/result')
 def compress_res():
-    return 
-
-
-        
-
-
-
-
+    return "Hi"
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)

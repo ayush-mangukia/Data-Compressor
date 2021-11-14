@@ -1,6 +1,12 @@
 import pickle
+import networkx as nx
+import matplotlib.pyplot as plt
+from collections import defaultdict
 
 def huffman():
+    graph = nx.DiGraph()
+    graph.name
+    
     a_file = open("m_words.pkl", "rb")
     words = pickle.load(a_file)
     # print(words)
@@ -50,7 +56,7 @@ def huffman():
             # if node is edge node then
             # display its huffman code
         if(not node.left and not node.right):
-            # print(f"{node.symbol} -> {newVal}")
+            print(f"{node.symbol} -> {newVal}")
             huffman[node.symbol] = newVal
     
     # list containing unused nodes
@@ -117,3 +123,5 @@ def huffman():
         c1 += (len(huffman[i]) * letters[i])
 
     # print(c, c1//8)
+
+huffman()

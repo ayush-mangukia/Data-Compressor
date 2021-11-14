@@ -8,7 +8,7 @@ def decimalToBinary(n):
 
     return result
 
-f1 = open('../code/compressed_file.txt',"r")
+f1 = open('compressed_file.txt',"r")
 
 a_file = open("huffman.pkl", "rb")
 huffman = pickle.load(a_file)
@@ -118,4 +118,4 @@ f2 = open("decompressed_file1.txt", "w")
 f2.write(result)
 f2.close()
 
-#decompress
+decompress()

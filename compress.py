@@ -1,7 +1,7 @@
 import pickle
 
 def compressor():
-    f1 = open("file.txt","r")
+    f1 = open("file.txt","r", errors='ignore')
 
     a_file = open("huffman.pkl", "rb")
     huffman = pickle.load(a_file)
@@ -52,3 +52,5 @@ def compressor():
     f2 = open("compressed_file.txt", "w")
     f2.write(result)
     f2.close()
+
+compressor()
