@@ -30,21 +30,10 @@
         </div>
     </header>
     <main role="main" class="container">
-        <p>
-        <h1 class="text-center" style="color:#ffffff;">Original File : {{orig}} Bytes</h1>
-        </p>
-        <br>
-        <p>
-            <h1 class="text-center" style="color:#ffffff;">Compressed File : {{comp}} Bytes</h1>
-        </p>
-        <br>
-        <p>
-            <h2 class="text-center" style="color:#ffffff;">Compression Ratio : {{orig/comp}}</h2>
-        </p>
-        <br><br>
+
 
         <p>
-            <a href="{{ url_for('download_compressed') }}">Download Compressed File</a>
+            <a href="{{ url_for('download_decompressed') }}">Download Decompressed File</a>
         </p>
         
     </main>

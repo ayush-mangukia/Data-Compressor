@@ -30,10 +30,18 @@
         </div>
     </header>
     <main role="main" class="container">
-        <p><h1 class="text-center" style="color:#ffffff;">Compress Data via Text File</h1></p>
-        <form action=" {{ url_for('compress_file') }} " method="get">
-        <div class="text-center" style="font-size:xx-large;">
-            <input class="btn-warning" type="submit" value="File"></div>
+        <p><h1 class="text-center" style="color:#ffffff;">Add the Huffman File</h1></p>
+        <br><br>
+        <form class="text-center" enctype=multipart/form-data action="" method="post" style="color:#ffffff; font-size: xx-large">
+            <br><br>
+            <div class="form-group">
+                <label for="name">File:</label>
+                <input type="file" class="form-control" id="file" name="file">
+            </div>
+            <div class="form-group" style="font-size:xx-large;">
+                <input class="btn-warning" type="submit" value="Decompress">
+            </div>
+        </form>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

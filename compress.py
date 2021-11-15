@@ -1,7 +1,17 @@
+from os import error
 import pickle
 
 def compressor():
     f1 = open("file.txt","r", errors='ignore')
+
+    # filename = ''
+
+    # for i in f:
+    #     filename += i
+
+    # #filename = "../data/canterbury/alice29.txt"
+
+    # f1 = open(filename,"r")
 
     a_file = open("huffman.pkl", "rb")
     huffman = pickle.load(a_file)
@@ -49,8 +59,8 @@ def compressor():
     else:
         result += byte_string[i:]
 
-    f2 = open("compressed_file.txt", "w")
+    f2 = open("compressed_file.txt", "w", errors='ignore')
     f2.write(result)
     f2.close()
 
-compressor()
+# compressor()

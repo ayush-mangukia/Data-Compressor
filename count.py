@@ -1,8 +1,17 @@
 import math
+from os import error
 import pickle
+import numpy as np
 
 def count():
-    f1 = open("file.txt","r")
+    f1 = open("file.txt","r", errors='ignore')
+
+    # filename = ''
+
+    # for i in f:
+    #     filename += i
+
+    # f1 = open(filename,"r")
 
     alp = 'abcdefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ0123456789'
     count = {}
@@ -43,7 +52,8 @@ def count():
 
     else:
         m = 1 * math.log2(n) // 1
-
+        #m = 0
+        m = n
 
     c = 0
     count_final = {}
@@ -61,7 +71,6 @@ def count():
                     count[j] = 0
                 count[j] += count_word[i]
 
-
     a_file = open("m_words.pkl", "wb")
     pickle.dump(count_final, a_file)
     a_file.close()
@@ -74,4 +83,7 @@ def count():
 
     # print(count)
 
-count()
+    # print(n)
+    # print(np.array(list(dict.values(count_word))).mean())
+    # print(np.array(list(dict.values(count_word))).std() ** 0.5)
+# count()

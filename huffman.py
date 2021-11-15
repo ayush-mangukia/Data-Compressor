@@ -1,12 +1,6 @@
 import pickle
-import networkx as nx
-import matplotlib.pyplot as plt
-from collections import defaultdict
 
 def huffman():
-    graph = nx.DiGraph()
-    graph.name
-    
     a_file = open("m_words.pkl", "rb")
     words = pickle.load(a_file)
     # print(words)
@@ -93,6 +87,8 @@ def huffman():
         # assign directional value to these nodes
         left.huff = 0
         right.huff = 1
+
+        # print(left.symbol, right.symbol)
     
         # combine the 2 smallest nodes to create
         # new node as their parent
@@ -124,4 +120,4 @@ def huffman():
 
     # print(c, c1//8)
 
-huffman()
+# huffman()
