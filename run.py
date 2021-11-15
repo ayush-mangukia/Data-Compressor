@@ -29,6 +29,12 @@ def download_decompressed():
     return send_file('decompressed_file.txt',
                      attachment_filename='Decompressed_File.txt',
                      as_attachment=True)
+                    
+@app.route('/download_huffman')
+def download_huffman():
+    return send_file('huffman.pkl',
+                     attachment_filename='huffman.pkl',
+                     as_attachment=True)
 
 @app.route('/compress/file', methods = ['GET','POST'])
 def compress_file():
